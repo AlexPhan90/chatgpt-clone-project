@@ -4,6 +4,7 @@ const DashboardPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const text = e.target.text.value;
+    console.log("Form submitted with text:", text); //DEBUG
     if (!text) return;
     await fetch("http://localhost:3000/api/chats", {
       method: "POST",
